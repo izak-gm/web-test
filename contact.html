@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statefine</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body>
+    <header>
+    <div class="header_container">
+      <div class="header-fix">
+        <a href="index.html" class="logo">
+          <img src="images/Statefine logo.png" alt="logo" class="logo-img" />
+        </a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <div class="header_menu">
+          <ul class="menu-clock">
+            <li><a href="index.html" class="hyper">Home</a></li>
+            <li><a href="Aboutus.html" class="hyper">About us</a></li>
+            <li><a href="contact.html" class="hyper">Contact</a></li>
+            <li><a href="Project.html" class="hyper">Project</a></li>
+            <li><a href="Project.html" class="hyper">Our Team</a></li>
+            <div class="search-menu">
+              <a
+                class="search--menu"
+                id="search-menu"
+                type="text"
+                oninput="searchItems()"
+                ><input type="text" placeholder="Enter your search"
+              /></a>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </header>
+    <div class="contact-cover">
+        <div class="image-contact">
+            <img src="images/Masterbed2.jpg" alt="" height="300" width="1000">
+        </div>
+    </div>
+    <div class="contact-container">
+        <div class="contact-info">
+            <h>CONTACT US</h>
+            <p>Please contact us by phone and email</p>
+            <div class="span-contact">
+                +25420279682
+                <br>
+                +25420279682
+            </div>
+            <div class="span-location">
+                <p>email.gmail.com</p>
+                <p>Nairobi ,Kenya</p>
+                <p>p.o box 230 nairobi kenya</p>
+            </div>
+        </div> 
+    </div>
+    <div class="feedback-container">
+        <div class="feedback-contact">
+            <div class="contact-row">
+                <h1>MESSAGE US</h1>
+                <p>Please fill the form below to get in touch with us</p>
+                <div class="error-system">
+                    <p>"<span>*</span>"All the marked with the * must be filled</p>
+                    <form action="contact" methods="POST" id="feedback">
+                        <label for="firstname" >First Name</label><br>
+                        <input type="text" placeholder="First name" id="firstname" required><br>
+                        <label for="lastname">Last Name</label><br>
+                        <input type="text" placeholder="Last name" id="lastname" required><br>
+                        <label for="phonenumber">Phone Number</label><br>
+                        <input type="integer" placeholder="+254708090" id="phoneNumber" required><br>
+                        <label for="email">Email</label><br>
+                        <input type="text" id="email" required  placeholder="Email">
+                        <p>leave us a message</p>
+                        <div>Type your feedback here with us</div>
+                        <textarea name="" id="" cols="30" rows="10"></textarea><br><br>
+                        <div class="main-btn"><button onclick="submitfeedback()">Send</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-container">
+        <div class="social">
+            <p>Follow us on our social media platform</p>
+            <a href="#"><box-icon type='logo' name='facebook'></box-icon></a>
+            <a href="#"><box-icon type='logo' name='twitter'></box-icon></a>
+            <a href="#"><box-icon name='instagram' type='logo' ></box-icon></a>
+            <a href="#"><box-icon name='youtube' type='logo' ></box-icon></a>
+                  
+        </div>
+        <div class="copyright">
+            <p>&copy2024 All Right Reserved</p>
+        </div>           
+    </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

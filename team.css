@@ -1,0 +1,17 @@
+.team-container{
+    display: flex;
+    padding: 5%;
+    margin: 20px;
+}
+.team-images{
+    align-items: center;
+}
+.team-images img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+.team-images p{
+    color: var(--text-color);
+    font-size:20px ;
+}
