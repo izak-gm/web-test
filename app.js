@@ -53,21 +53,4 @@ function submitFeedback() {
       console.error("Error:", error);
     });
 }
-//search structure
-function searchItems() {
-  // Get input value and convert to lowercase for case-insensitive search
-  var searchQuery = document.getElementById("search-menu").value.toLowerCase();
 
-  // Get the list of items
-  var items = document.getElementById("");
-
-  // Loop through each item and hide or show based on the search query
-  for (var i = 0; i < items.length; i++) {
-    var currentItem = items[i].textContent.toLowerCase();
-    if (currentItem.includes(searchQuery)) {
-      items[i].style.display = "block"; // Show the item
-    } else {
-      items[i].style.display = "none"; // Hide the item
-    }
-  }
-}
