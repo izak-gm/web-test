@@ -88,6 +88,7 @@
     height: 100%;
     z-index: 1;
     width: 100%;
+    height:fit-content;
     max-width: 1300px;
     padding: 0;
   }
