@@ -99,7 +99,6 @@
     top: -1000px;
     opacity: 0;
     transition: all 0.5s ease;
-    height: 50vh;
     z-index: -1;
     background-color: var(--bg-color);
   }
@@ -479,7 +478,6 @@
   margin-left: 100px;
 }
 .contact-row {
-  height: 100%;
   width: 70%;
 }
 .contact-row h1 {
