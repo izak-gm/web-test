@@ -36,7 +36,7 @@ body,html{
 .about-message{
     width: 100%;
     align-items: center;
-    margin: 20%;
+    padding: 30% 0%;
 }
 .about-message h1{
     color: var(--text-teal);
@@ -51,6 +51,40 @@ body,html{
     font-size:20px ;
     color: white;
 
+}
+@media all and (max-width:1024){
+    .about-container{
+        width: 100%;
+        background-image: url("../images/stolen.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .about-message{
+        align-items: center;
+        width: 100%;
+        padding: 30%;
+    }
+    .about--section{
+        width: 600px;
+    }
+}
+@media all and (max-width:760px){
+    .about-container{
+        width: 100%;
+        background-image: url("../images/stolen.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .about-message{
+        align-items: center;
+        width: 100%;
+        padding: 50% 0%;
+    }
+    .about--section{
+        width: 650px;
+    }
 }
 /* founder section */
 .executive{
@@ -95,6 +129,32 @@ body,html{
     line-height: 25px;
     padding:4% 0%;
 }
+@media  all and (max-width:1024px) {
+    .executive--sec{
+        display: grid;
+    }
+    .founder-right-sec {
+        padding: 0% 20%;
+    }
+    .founder-right-sec img{
+        align-items: center;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+@media  all and (max-width:1760px) {
+    .executive--sec{
+        display: grid;
+    }
+    .founder-right-sec {
+        padding: 0% 20%;
+    }
+    .founder-right-sec img{
+        align-items: center;
+        object-fit: cover;
+        object-position: center;
+    }
+}
 /* executive section two */
 .exe-corner{
     width: 100%;
@@ -135,4 +195,22 @@ body,html{
     text-align:center ;
     align-items: center;
     font-size: 16px;
+}
+@media all and (max-width:1024px){
+    .exe-area{
+        width: 100%;
+    }
+    .exe--sec2{
+        display: grid;
+        grid-template-columns: repeat(3,3fr);
+    }
+}
+@media all and (max-width:760px){
+    .exe-area{
+        width: 100%;
+    }
+    .exe--sec2{
+        display: grid;
+        grid-template-columns: repeat(3,3fr);
+    }
 }

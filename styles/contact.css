@@ -143,18 +143,20 @@ html {
   color: teal;
   
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:1024px){
   .contact-container{
     width: 700px;
     height: 100%;
     display: grid;
     margin: 20px;
+    padding: 3%;
   }
   .contact-area{
     align-items: center;
   }
   .contact-section{
     background-color:rgb(75, 72, 72) ;
+    height: 135vh;
   }
   .contact-right-sec{
     width: 500px;
