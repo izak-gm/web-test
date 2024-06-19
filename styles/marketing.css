@@ -42,7 +42,7 @@
 @media all and (max-width:1024px){
     .listing-phase{
     display: grid;
-    grid-template-columns: repeat(2,2fr);
+    grid-template-columns: repeat(2,1fr);
     padding: 2rem;
     margin: 30px 50px;
     }
