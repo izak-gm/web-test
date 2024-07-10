@@ -19,119 +19,162 @@ body {
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
-.header-container {
-  width: 100%;
+.header-sec {
   background-color: var(--header-color);
-}
-.header-area {
-  display: flex;
-  justify-content: space-around;
-}
-.rigth-sec {
-  width: 100%;
-  height: 100px;
-  margin: 0% 0px;
-  cursor: pointer;
-}
-.rigth-sec img {
-  height: 100px;
-  width: 200px;
-  object-fit: cover;
-}
-.left-sec {
-  width: 35%;
+  height: 80px;
   display: flex;
   justify-content: center;
-}
-.left-sec ul {
-  display: flex;
-  padding: 1.5% 0;
   align-items: center;
-  text-align: center;
-  list-style: none;
-}
-.header-menu li {
-  justify-content: right;
-  align-items: center;
-  list-style: none;
-  display: inline-block;
-  text-wrap: nowrap;
-}
-.header-link a {
   font-size: 1.2rem;
-  text-decoration-line: none;
-  font-weight: 700;
-  display: inline-block;
+  position: sticky;
+  top: o;
+  z-index: 999;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+.img{
+  width: 150px;
+  object-fit: cover;
+  object-position: center;
+}
+.header__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+.header__item {
+  height: 30px;
+}
+.header__links {
+  color: #fff;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  color: white;
-  margin: 5px;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
 }
-.header-link a:hover{
-  color: teal;
-  display: inline;
+.header__btn {
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100%;
 }
-.button-primary {
-  float: right;
-  margin: 10px;
-  padding: 10px;
-  font-size: 24px;
-  color: white;
+.button {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+  padding: 10px 20px;
+  height: 100%;
+  width: 100%;
+  border: none;
   outline: none;
-  background-color: transparent;
-  display: none;
+  border-radius: 4px;
+  background: #f77062;
+  color: #fff;
 }
-@media all and(max-width:1024px){
-  body,html{
-    overflow-x:hidden ;
-    scroll-behavior: smooth;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  .header-container{
-    width: 100%;
-    height: 100%;
-  }
-  .header-area{
-    width: 100%;
+.button:hover {
+  background: #4837ff;
+  transition: all 0.3s ease;
+}
+.header__links:hover {
+  color: #f77862;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 960px) {
+  .header__container {
     display: flex;
     justify-content: space-between;
-  }
-
-  .left-sec{
+    height: 50px;
+    z-index: 1;
     width: 100%;
-    height:100%;
+    max-width: 1300px;
+    padding: 0;
   }
-  .header-menu ul{
-    display: block;
+  .header__btn {
+    padding-bottom: 1rem;
+  }
+  .button {
+    display: flex;
+    justify-content: center;
     align-items: center;
+    width: 80%;
+    height: 30px;
+    margin: 0;
+  }
+  .header__menu {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -1000px;
+    opacity: 0;
+    transition: all 0.5s ease;
+    height: 50vh;
+    z-index: -1;
+    background: #131313;
+  }
+  .header__menu.active {
+    background: #131313;
+    top: 100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 99;
+    height: 70vh;
+    font-size: 1rem;
+  }
+  #header__logo {
+    padding-left: 25px;
+  }
+  .header__toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+  }
+  .header__item {
+    width: 100%;
+  }
+  .header__links {
     text-align: center;
-    top: 80px;
-    left: 00%;
-    transition: all .5s;
+    padding: 1rem;
+    width: 100%;
+    display: table;
   }
-  .header-menu li{
+  #mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+  }
+  
+  .header__toggle .bar {
     display: block;
-    margin: 2%;
-    text-align: left;
-    align-items: center;
-  }
-   .header-link a{
-    padding: .5rem;
-   }
-   .header-link a:hover{
-    color: #081b29;
-   }
-  .button-primary {
     cursor: pointer;
-    float: right;
-    font-size: 24px;
-    color: white;
-    outline: none;
-    background-color: transparent;
-    display: block;
   }
-
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }
 /* navigation section */
 .nav-container{
@@ -153,22 +196,78 @@ body {
   width: 100%;
 }
 .nav-message{
-  margin: 0rem 40px;
+  display: flexbox;
+  justify-content: center;
   align-items: center;
-  padding: 29% 7%; 
-  backface-visibility: hidden;
-  width: 90%;
+  align-content: baseline;
+  padding: 34% 2% 2% 1%;
 }
 .nav-message h1{
-  padding: 0rem;
-  color: black;
+  align-items: center;
   text-align: center;
 }
 .nav-message p{
-  padding: 1rem 5rem;
-  color: black;
-  text-align: left;
+ align-items: center;
+ font-size: 20px;
+ font-family:"static/Raleway-Bold.tff" ;
+}
+@media all and (max-width:1024px){
+  .nav-container{
+  width: 100%;
+  height: 90vh;
+  background-image: url("../images/Front-photo.png");
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
   align-items: center;
+}
+.nav-area{
+  width: 100%;
+}
+.nav-section{
+  width: 100%;
+}
+.nav-subsection{
+  width: 100%;
+}
+.nav-message{
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  align-content: baseline;
+  margin: 2%;
+  padding: 37% 2% 2% 1%;
+}
+}
+@media all and (max-width:760px){
+  .nav-container{
+  width: 100%;
+  height: 90vh;
+  background-image: url("../images/Front-photo.png");
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+}
+.nav-area{
+  width: 100%;
+}
+.nav-section{
+  width: 100%;
+}
+.nav-subsection{
+  width: 100%;
+}
+.nav-message{
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  align-content: baseline;
+  margin: 2%;
+  padding: 70% 2% 2% 1%;
+  
+}
+
 }
 /* article section */
 .article-container{
@@ -182,6 +281,7 @@ body {
 .article-wrapper{
   align-items: center;
   padding: 1rem 0rem;
+  cursor: pointer;
 }
 .article-wrapper h1{
   align-items: center;
@@ -208,23 +308,45 @@ body {
   margin: 20px;
   align-items: center;
   width:9rem;
+  border-radius: 50px;
+  border: transparent;
+  font-family: "static/Raleway-Bold";
+}
+.article-btn:hover{
+  color: white;
+  background-color: #081b29;
 }
 @media all and (max-width:760px){
+  .article-container{
+    width: 100%;
+    min-height: 70vh;
+  }
+  .article-wrapper {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
   .wrapper-article ul{
     align-items: center;
     display: grid;
     padding: 0%;
+    cursor: pointer;
   }
-
+  .article-btn{
+    cursor: pointer;
+  }
+  .article-btn:hover{
+    color: white;
+    background-color: #081b29;
+  }
 }
-@media all and (max-width:1024px){}
 /* note section */
 .note{
   background-image: url("../images/bottom\ photo.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 40vh;
+  height: 60vh;
   cursor: pointer;
 }
 .note-container{
@@ -235,24 +357,42 @@ body {
 }
 .note-message{
   font-size: 1.5rem;
-  padding: 6rem 3rem;
+  display: flexbox;
+  justify-content: center;
+  padding: 20% 0;
 }
 .note-message p{
-  margin: 0 10%;
+  
+  display: flex;
+  justify-content: center;
+  text-decoration: none;  
+}
+.note-message a{
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
 }
 .note-btn{
+  display: flex;
+  justify-content: center;
   height: 40px;
   width: 150px;
   align-items: center;
   cursor: pointer;
-  margin: 0 50%;
   text-align: center;
-  text-wrap: nowrap;
-  color: white;
-  background-color: #081b29;
+  text-decoration: none;
+  color: black;
+  border: transparent;
+  border-radius: 50px;
+  font-size: 18px;
+  font-family:'static/Raleway-SemiBold.tff' ;
 }
 .note-btn:hover{
-  background-color: #38b6ff;
+  background-color: #081b29;
+  color: white ;
+}
+.fa-angles-right{
+  padding: 0 2%;
 }
 /* footer section */
 .footer-container {

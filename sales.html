@@ -9,26 +9,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 <body>
-  <section class="header" id="home">
-    <div class="header-container">
-      <div class="header-area">
-        <a href="index.html">
-          <div class="rigth-sec">
-            <img src="images/Asset to Holder White.png" alt="Logo">
-          </div>
-        </a>
-        <label class="button-primary" id="menu-bar">
-          <i class="fa-solid fa-bars"></i>
-        </label>
-        <div class="left-sec" id="mobile">
-          <ul class="header-menu">
-            <li class="header-link"><a class="active" href="index.html">HOME</a></li>
-            <li class="header-link"><a class="active" href="#aside">EXCLUSIVE LISTING</a></li>
-            <li class="header-link"><a class="active" href="about.html">ABOUT</a></li>
-            <li class="header-link"><a class="active" href="contact.html">CONTACT</a></li>
-          </ul>
-        </div>
+  <section class="header-sec">
+    <div class="header__container">
+      <a href="index.html" id="header__logo"> <img class="img" src="images/Asset to Holder White.png" alt=""></a>
+      <div class="header__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </div>
+      <ul class="header__menu">
+        <li class="header__item">
+          <a href="index.html" class="header__links">Home</a>
+        </li>
+        <li class="header__item">
+          <a href="index.html" class="header__links">Exclusive listing</a>
+        </li>
+        <li class="header__item">
+          <a href="about.html" class="header__links">About Us</a>
+        </li>
+        <li class="header__item">
+          <a href="contact.html" class="header__links">Contact</a>
+        </li>
+      </ul>
     </div>
   </section>
   <section class="listing-section">
@@ -145,4 +147,14 @@
     </div>
   </div>
 </body>
+<script>
+  const menu = document.querySelector("#mobile-menu");
+  const menu__links = document.querySelector(".header__menu");
+
+  menu.addEventListener("click", function () {
+    menu.classList.toggle("is-active");
+    menu__links.classList.toggle("active");
+  });
+
+</script>
 </html>
