@@ -147,9 +147,9 @@ html {
   .contact-container{
     width: 700px;
     height: 100%;
-    display: grid;
-    margin: 20px;
-    padding: 3%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   .contact-area{
     align-items: center;
