@@ -40,6 +40,9 @@ body,html{
     align-items: center;
     margin: 2%;
     place-items: baseline;
+    position: absolute;
+        bottom: 20%;
+        left: 0%;
 }
 .about-message h1{
     color: var(--text-teal);
@@ -55,7 +58,7 @@ body,html{
     color: white;
 
 }
-@media all and (max-width:1024){
+@media all and (max-width:1024px){
     .about-container{
         width: 100%;
         background-image: url("../images/stolen.jpg");
@@ -67,11 +70,15 @@ body,html{
         display: flexbox;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        padding: 50% 0;
+        min-width: 800px;
+        position: absolute;
+        bottom: 20%;
+        left: 0%;
     }
     .about--section{
+        justify-content: baseline;
         width: 600px;
+        padding: 2%;
     }
 }
 @media all and (max-width:760px){
